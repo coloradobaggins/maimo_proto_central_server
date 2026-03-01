@@ -39,4 +39,10 @@ export class PersonDetectorGateway
     client.join(roomName);
     console.log(`Cliente ${client.id} se unió a la room: ${roomName}`);
   }
+
+  // Metodo para emitir a una room especifica
+  notifyRoom(room: string, event: string) {
+    console.log(`Emitiendo evento '${event}' a la room '${room}'`);
+    this.server.to(room).emit(event);
+  }
 }
