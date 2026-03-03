@@ -44,5 +44,6 @@ export class PersonDetectorGateway
   notifyRoom(room: string, event: string) {
     console.log(`Emitiendo evento '${event}' a la room '${room}'`);
     this.server.to(room).emit(event);
+    return { message: `Evento '${event}' emitido a la room '${room}'` };
   }
 }

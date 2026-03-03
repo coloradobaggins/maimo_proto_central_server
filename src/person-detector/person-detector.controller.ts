@@ -21,7 +21,7 @@ export class PersonDetectorController {
 
   @Post('config/update')
   notifyUpdate() {
-    this.personDetectorGateway.notifyRoom(
+    return this.personDetectorGateway.notifyRoom(
       'person-detector-app',
       'config:update',
     );
