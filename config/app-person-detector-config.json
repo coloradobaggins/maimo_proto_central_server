@@ -12,7 +12,7 @@
             "child",
             "both"
         ],
-        "default_puzzles_category": "obelisco"
+        "default_puzzle_category": "obelisco"
     },
     "data": {
         "idle": {
