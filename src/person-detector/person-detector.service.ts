@@ -42,4 +42,20 @@ export class PersonDetectorService {
       );
     }
   }
+
+  async getContent() {
+    console.log(`ON GET CONTENT!...`);
+
+    try {
+      const filePath = path.join(process.cwd(), 'config', 'app-content.json');
+      const fileContent = await readFile(filePath, 'utf-8');
+      console.log(`Ok, json desde nestjs!`);
+      return JSON.parse(fileContent);
+    } catch (err) {
+      console.error(
+        `Error leyendo app-person-detector-content.json de disco`,
+        err,
+      );
+    }
+  }
 }

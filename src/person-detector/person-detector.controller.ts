@@ -26,4 +26,9 @@ export class PersonDetectorController {
       'config:update',
     );
   }
+
+  @Get('content')
+  getContent() {
+    return this.personDetectorService.getContent();
+  }
 }
